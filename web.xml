@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	id="WebApp_ID" version="2.5">
+  	<!-- 配置Servlet  -->
+  	<servlet>
+  		<!-- Servlet的名称 -->
+  		<servlet-name>LoginServlet</servlet-name>
+  		<!-- Servlet 的类全路径 -->
+  		<servlet-class>com.servlet.webservlet.LoginServlet</servlet-class>
+  	</servlet>
+  	<servlet>
+  		<!-- Servlet的名称 -->
+  		<servlet-name>LifeServlet</servlet-name>
+  		<!-- Servlet 的类全路径 -->
+  		<servlet-class>com.servlet.c_life.LifeServlet</servlet-class>
+  		
+  	</servlet>
+  	<!-- 配置Servlet的映射 -->
+  	<servlet-mapping>
+  		<servlet-name>LoginServlet</servlet-name>
+  		<!-- Servlet的访问路径（login登陆页面） -->
+  		<url-pattern>/login</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+  		<servlet-name>LifeServlet</servlet-name>
+  		<!-- Servlet的访问路径（执行/life页面时调用LifeServlet类init()方法） -->
+  		<url-pattern>/life</url-pattern>
+  	</servlet-mapping>
+</web-app>
